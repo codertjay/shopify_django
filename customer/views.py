@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import render, redirect
 
 # Create your views here.
@@ -8,13 +9,11 @@ def wishlist(request):
     return render(request, 'customer/wish_list.html')
 
 
-def checkout(request):
-    return render(request, 'customer/checkout.html')
-
-
-class PlaceOrder(View):
+class Checkout(View):
     def get(self, request):
-        return render(request, 'customer/place_order.html', {'stripe_public_key': 'stripe_public_key'})
+        return render(request, 'customer/checkout.html',
+                      {'stripe_public_key': 'pk_test_0kwoXbmhxUvOxN00BSkLynRe00ZnQxtpJk'})
 
     def post(self, request):
-        return redirect('customer:place_order')
+        messages.success(request, 'Order was successful')
+        return redirect('customer:checkout')

@@ -322,6 +322,13 @@
                                             class="fi-rs-angle-down"></i></a>
                                 </li>
                                 <li>
+                                    <a href="#">Pages <i class="fi-rs-angle-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="{% url 'user:user_login' %}">Login</a></li>
+                                        <li><a href="{% url 'user:register' %}">Register</a></li>
+                                    </ul>
+                                </li>
+                                <li>
                                     <a href="{% url 'home:contact' %}">Contact</a>
                                 </li>
                             </ul>
@@ -465,7 +472,7 @@
                             </ul>
                         </li>
                         <li class="menu-item-has-children">
-                            <a href="blog-category-fullwidth.html">Blog</a>
+                            <a href="#">Blog</a>
                         </li>
                         <li class="menu-item-has-children">
                             <a href="#">Pages</a>
@@ -476,10 +483,10 @@
             </div>
             <div class="mobile-header-info-wrap">
                 <div class="single-mobile-header-info">
-                    <a href="page-contact.html"><i class="fi-rs-marker"></i> Our location </a>
+                    <a href="{% url 'home:contact' %}"><i class="fi-rs-marker"></i> Our location </a>
                 </div>
                 <div class="single-mobile-header-info">
-                    <a href="page-login.html"><i class="fi-rs-user"></i>Log In / Sign Up </a>
+                    <a href="{% url 'user:user_login' %}"><i class="fi-rs-user"></i>Log In / Sign Up </a>
                 </div>
                 <div class="single-mobile-header-info">
                     <a href="#"><i class="fi-rs-headphones"></i>(+01) - 2345 - 6789 </a>
@@ -510,6 +517,12 @@
     </div>
 </div>
 <!--End header-->
+{% if messages %} {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show p-3" role="alert">
+        {{ message }}
+
+    </div>
+{% endfor %} {% endif %}
 {% block content %}
 
 {% endblock %}

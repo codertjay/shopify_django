@@ -1,11 +1,10 @@
 from django.urls import path
 
-from .views import wishlist,checkout,PlaceOrder
+from .views import wishlist, Checkout
 
 app_name = 'customer'
 
 urlpatterns = [
     path('wishlist/', wishlist, name='wishlist'),
-    path('checkout/', checkout, name='checkout'),
-    path('place_order/', PlaceOrder.as_view(), name='place_order'),
+    path('checkout/', Checkout.as_view(), name='checkout'),
 ]
