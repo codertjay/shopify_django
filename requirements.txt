@@ -1,0 +1,11 @@
+Django==4.0.3
+## The following requirements were added by pip freeze:
+asgiref==3.5.0
+certifi==2021.10.8
+charset-normalizer==2.0.12
+idna==3.3
+requests==2.27.1
+sqlparse==0.4.2
+stripe==2.67.0
+tzdata==2021.5
+urllib3==1.26.8
