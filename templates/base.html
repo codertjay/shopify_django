@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8"/>
-    <title>Gimsap - Multipurpose eCommerce HTML Template</title>
+    <title> Home | Gimsap Markt | African - Asian - Caribbean Mart | Calgary AB &ndash; GIMSAP MARKT INC</title>
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -280,6 +280,16 @@
                                         </li>
 
                                         <li>
+                                            <a href="{% url 'user:register' %}"><i
+                                                    class="fi fi-rs-stats mr-10"></i>Sign
+                                                up</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'user:register' %}"><i
+                                                    class="fi fi-rs-sign-in mr-10"></i>Sign
+                                                in</a>
+                                        </li>
+                                        <li>
                                             <a href="{% url 'user:user_login' %}"><i
                                                     class="fi fi-rs-sign-out mr-10"></i>Sign
                                                 out</a>
@@ -314,20 +324,12 @@
                                     <a href="{% url 'home:about' %}">About</a>
                                 </li>
                                 <li>
-                                    <a href="{% url 'product:products' %}">Shop <i
-                                            class="fi-rs-angle-down"></i></a>
+                                    <a href="{% url 'product:products' %}">Shop </a>
                                 </li>
                                 <li>
-                                    <a href="#">Blog <i
-                                            class="fi-rs-angle-down"></i></a>
+                                    <a href="#">Blog </a>
                                 </li>
-                                <li>
-                                    <a href="#">Pages <i class="fi-rs-angle-down"></i></a>
-                                    <ul class="sub-menu">
-                                        <li><a href="{% url 'user:user_login' %}">Login</a></li>
-                                        <li><a href="{% url 'user:register' %}">Register</a></li>
-                                    </ul>
-                                </li>
+
                                 <li>
                                     <a href="{% url 'home:contact' %}">Contact</a>
                                 </li>
@@ -444,34 +446,6 @@
                             <a href="#">Vendors</a>
                         </li>
                         <li class="menu-item-has-children">
-                            <a href="#">Mega menu</a>
-                            <ul class="dropdown">
-                                <li class="menu-item-has-children">
-                                    <a href="#">Women's Fashion</a>
-                                    <ul class="dropdown">
-                                        <li><a href="{% url 'product:product_detail' 'slug' %}">Dresses</a></li>
-                                        <li><a href="{% url 'product:product_detail' 'slug' %}">Blouses &
-                                            Shirts</a></li>
-                                        <li><a href="{% url 'product:product_detail' 'slug' %}">Hoodies &
-                                            Sweatshirts</a></li>
-                                        <li><a href="{% url 'product:product_detail' 'slug' %}">Women's Sets</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">Men's Fashion</a>
-                                    <ul class="dropdown">
-                                        <li><a href="{% url 'product:product_detail' 'slug' %}">Jackets</a></li>
-                                        <li><a href="{% url 'product:product_detail' 'slug' %}">Casual Faux
-                                            Leather</a></li>
-                                        <li><a href="{% url 'product:product_detail' 'slug' %}">Genuine
-                                            Leather</a></li>
-                                    </ul>
-                                </li>
-
-                            </ul>
-                        </li>
-                        <li class="menu-item-has-children">
                             <a href="#">Blog</a>
                         </li>
                         <li class="menu-item-has-children">
@@ -510,8 +484,7 @@
                         src="{% static 'assets/imgs/theme/icons/icon-youtube-white.svg' %}"
                         alt=""/></a>
             </div>
-            <div class="site-copyright">Copyright 2021 © Gimsap. All rights reserved. Powered by
-                AliThemes.
+            <div class="site-copyright">Copyright 2021 © Gimsap. All rights reserved.
             </div>
         </div>
     </div>
@@ -562,9 +535,10 @@
                             <p class="font-lg text-heading">Awesome grocery store website template</p>
                         </div>
                         <ul class="contact-infor">
-                            <li><img src="{% static 'assets/imgs/theme/icons/icon-location.svg' %}" alt=""/><strong>Address: </strong>
+                           {% comment %}
+                           <li><img src="{% static 'assets/imgs/theme/icons/icon-location.svg' %}" alt=""/><strong>Address: </strong>
                                 <span>5171 W Campbell Ave undefined Kent, Utah 53127 United States</span>
-                            </li>
+                            </li>{% endcomment %}
                             <li><img src="{% static 'assets/imgs/theme/icons/icon-contact.svg' %}"
                                      alt=""/><strong>Call
                                 Us:</strong><span>(+91) - 540-025-124553</span></li>
@@ -572,7 +546,7 @@
                                      alt=""/><strong>Email:</strong><span><a
                                     href="/cdn-cgi/l/email-protection"
                                     class="__cf_email__"
-                                    data-cfemail="0774666b6247496274732964686a">[email&#160;protected]</a></span>
+                                    data-cfemail="0774666b6247496274732964686a">gimsapmarkt@gmail.com</a></span>
                             </li>
                             <li><img src="{% static 'assets/imgs/theme/icons/icon-clock.svg' %}"
                                      alt=""/><strong>Hours:</strong><span>10:00 - 18:00, Mon - Sat</span>
@@ -625,13 +599,13 @@
             <div class="col-xl-4 col-lg-6 col-md-6 text-end d-none d-md-block ">
                 <div class="mobile-social-icon ">
                     <h6>Follow Us</h6>
-                    <a href="# "><img
+                    <a href="https://www.facebook.com/Gimsap-Markt-105253258056163"><img
                             src="{% static 'assets/imgs/theme/icons/icon-facebook-white.svg' %} "
                             alt=" "/></a>
                     <a href="# "><img
                             src="{% static 'assets/imgs/theme/icons/icon-twitter-white.svg' %} "
                             alt=" "/></a>
-                    <a href="# "><img
+                    <a href="https://www.instagram.com/gimsap.markt"><img
                             src="{% static 'assets/imgs/theme/icons/icon-instagram-white.svg' %} "
                             alt=" "/></a>
                     <a href="# "><img
